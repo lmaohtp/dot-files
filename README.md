@@ -7,6 +7,7 @@ Configuration files
 		vim
 		xorg
 		weechat
+		neofetch
 
 
 Hopefully more will be added to the future
