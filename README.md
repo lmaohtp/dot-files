@@ -5,7 +5,7 @@ Configuration files
 	Software used:
 		i3-wm
 		vim
-		xorg
+		Xresources
 		weechat
 		neofetch
 
