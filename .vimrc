@@ -1,4 +1,11 @@
-iletype off
+set number
+syntax on
+
+set tabstop=4
+set expandtab
+
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'scrooloose/nerdtree'
@@ -45,17 +52,4 @@ function! s:compile_and_run()
     endif
 endfunction
 
-nnoremap <F6> :call<SID>unitTests()<CR>
-
-function! s:unitTests()
-    exec "AsyncRun! time /usr/bin/vagrant global-status | awk 'FNR == 3 {print $1}' | xargs vagrant ssh -c 'cd /var/www/phpapps/player.api.stv.tv/ && php7.1 vendor/bin/codecept run unit"
-endfunction
-
-" augroup SPACEVIM_ASYNCRUN
-"     autocmd!
-"    " Automatically open the quickfix window
-"     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(15, 1)
-" augroup END
-"
-" asyncrun now has an option for opening quickfix automatically
 let g:asyncrun_open = 15
