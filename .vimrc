@@ -21,14 +21,6 @@ filetype plugin indent on
 
 map <C-n> :NERDTreeToggle<CR>
 
-command Unit execute "new | 0read !/usr/bin/vagrant global-status | awk 'FNR == 3 {print $1}' | xargs vagrant ssh -c 'cd /var/www/phpapps/player.api.stv.tv/ && php7.1 vendor/bin/codecept run unit'"
-command Functional execute "new | 0read !/usr/bin/vagrant global-status | awk 'FNR == 3 {print $1}' | xargs vagrant ssh -c 'cd /var/www/phpapps/player.api.stv.tv/ && php7.1 vendor/bin/codecept run functional'"
-command Ssh execute "new | 0read !/usr/bin/vagrant global-status | awk 'FNR == 3 {print $1}' | xargs vagrant ssh"
-command Provision execute "new | 0read !/usr/bin/vagrant global-status | awk 'FNR == 3 {print $1}' | xargs vagrant provision"
-command Up execute "new | 0read !/usr/bin/vagrant global-status | awk 'FNR == 3 {print $1}' | xargs vagrant up"
-command Live execute "!osascript ~/Projects/AppleScriptStuff/Live-Conn.scpt"
-command QA execute "!osascript ~/Projects/AppleScriptStuff/QA-Conn.scpt"
-
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 
 colorscheme lucario
